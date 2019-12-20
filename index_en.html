@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <title>Благодійний фонд - "Розумне майбутнє"</title>
+    <meta name="description" content="IT-курси, дитячий фонд, благодійний фонд, курси для дітей, англійська мова для дітей">
+    <meta name="keywords" content="дитячі курси, благодійний фонд">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Chewy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logо">
+            <a href="index_en.html">
+                <img src="images/future_logo_black.png" alt="logo" height="auto" width="100px">
+            </a>
+        </div>
+        <div class="lang_select">
+            <a href="index.html">
+              Ukr
+            </a>
+            <a href="index_ru.html">
+              Ru
+            </a>
+            <a href="index_en.html">
+              En
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index_en.html">Home</a></li>
+            <li><a href="about_en.html">About</a></li>
+            <li><a href="activity_en.html">Activity</a></li>
+            <li><a href="cooperation_en.html">Cooperation</a></li>
+            <li><a href="blog_en.html">Blog</a></li>
+            <li><a href="contacts_en.html">Contacts</a></li>
+            <li>
+              <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                <input type="text" placeholder="Search.." name="search2">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <div class="intro">
+      <h1 class="intro-f1">CHARITY FUND</h1>
+      <h1 class="intro-f2">"SMART FUTURE"</h1>
+    </div>
+    <script>
+        
+    </script>
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/shkola.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/main_future-1.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/13.jpg" style="width:100%">
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/19.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/2.jpg" style="width:100%">
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/15.jpg" style="width:100%">
+      </div>
+        
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <div class="row_img">
+        <div class="column">
+          <img class="demo cursor" src="images/shkola.jpg" style="width:100%" onclick="currentSlide(1)" alt="Charity Foundation Smart Future">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/main_future-1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Charity Foundation Smart Future">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/13.jpg" style="width:100%" onclick="currentSlide(3)" alt="Charity Foundation Smart Future">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/19.jpg" style="width:100%" onclick="currentSlide(4)" alt="Charity Foundation Smart Future">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/2.jpg" style="width:100%" onclick="currentSlide(5)" alt="Charity Foundation Smart Future">
+        </div>    
+        <div class="column">
+          <img class="demo cursor" src="images/15.jpg" style="width:100%" onclick="currentSlide(6)" alt="Charity Foundation Smart Future">
+        </div>
+      </div>
+    </div><br><br>
+    <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            dots[slideIndex-1].style.h1 = 'Charity Foundation "Smart Future"';
+            captionText.innerHTML = dots[slideIndex-1].style.h1;
+          }
+      </script>
+    <div class="main_text" style="font-family: 'Roboto Condensed', sans-serif;">
+        <p class="about">
+            Charity Foundation <b>«Charity school “Smart Future”»</b> - is the first in Ukraine
+            Charity school for personal and IT development of children.
+        </p>
+        <p class="about">
+            We empower for vulnerable children to learn about network and cloud technologies,
+            software development, robot programming, and to make first steps in the development of his career earlier than most peers.
+        </p>
+        <p class="about">
+            Educational programms of Charity school “Smart Future” Designed specifically for both junior and senior pupils. 
+            The programs introduce children to modern technologies, to life in the modern information world and
+            the variety of possibilities in it.
+        </p>
+        <p class="about">
+            All programs have a practical focus and are preparing for future work in the IT industry.
+      </p>
+    </div><br>
+    <div class="sec_text">
+        <p class="more">
+            Our mission is to fulfill children's dreams and to give happy future. 
+        </p>
+    </div><br><br>
+    <div class="main_purpose">
+        <p>
+            The main purpose of the Foundation is to provide quality education and personal development to children and adolescents of socially disadvantaged groups:
+        </p><br>
+        <ul class="list">
+                <li>orphans</li>
+                <li>disabled children</li>
+                <li>children from large families (having 5 or more children)</li>
+                <li>children of military personnel who died or were injured are incompatible with work</li>
+        </ul><br>
+        <p>
+            For this purpose Charity Foundation «Charity school “Smart Future”» raises funds from philanthropists, organizes the educational process, develops and implements training programs. 
+            We focus our efforts on learning modern technology because the IT industry is the most stable, most profitable and the most promising of all industries.
+        </p><br>
+        <div class="net">
+            <a href="https://www.facebook.com/rozumnemaybutne/?__tn__=%2Cd%2CP-R&eid=ARAvVo1Qo0rL7kUYVBfnU8B6CqoCz--98rx7xkDslXSFL9dySLYd2sekOWQM9vYDOeHij0qAHDoiDM5L" class="fa fa-facebook-square" aria-hidden="true"></a>
+        </div>
+    </div><br><br>
+    
+    <div class="action" style="margin: 0 2vw;">
+        <h1 class="our_activity">
+            Наша діяльність 
+        </h1><br>
+        <button class="accordion"><i class="fa fa-laptop"></i><b>ІТ-school Main IT School</b><i> (In summer and on holidays, the IT school operates as an IT camp)</i>
+        </button>
+            <div class="panel">
+            <ul>
+               <li><a href="" >robotics</a></li>
+               <li><a href="">cloud technologies </a></li>
+               <li><a href="">programming on Scratch</a></li>
+               <li><a href="">development on Java, Python, PHP, c#</a></li>
+               <li><a href="">grounds of WEB – development</a></li>
+               <li><a href="">net technologies</a></li>
+               <li><a href="">2D - modeling</a></li>
+            </ul>
+        </div><br>
+
+        <button class="accordion"><i class="fa fa-desktop"></i><b>>Training in specialized courses </b><i> (for teens from 14 to 18 years)</i></button>
+        <div class="panel">
+            <ul>
+                <li><a href="">robotics</a></li>
+                <li><a href="">development on Java, Python, PHP, c#</a></li>
+                <li><a href="">grounds of WEB – development</a></li>
+                <li><a href="">net technologies</a></li>
+            </ul>
+        </div><br>
+
+        <button class="accordion"><i class="fa fa-gamepad"></i> <b>Start IT</b></button>
+        <div class="panel">
+            <ul>
+                <li><a href="">A project to train young IT professionals in the field of WEB development and development on Java</a></li>         
+            </ul>
+        </div><br>
+        <button class="accordion"><i class="fa fa-language"></i> <b>Learn English with advanced use of IT </b></button>
+        <div class="panel">
+            <ul>
+                <li><a href="">English language IT for children and adolescents 13-18 years</a></li>         
+            </ul>
+        </div>
+    </div><br><br>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+            
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
+    </script>
+    <div class="action">
+        <h1 class="our_galary">
+            Gallery 
+        </h1><br>
+        <div class="gal_1" style="text-align: right; font-size: 2vh; padding-right: 2vw; color: black;">
+          <a href="about.html" style="text-decoration: none; color: black;">
+            All gallery  <i class="right"></i>
+          </a>    
+      </div><br>
+    </div>
+    <div class="row"> 
+        <div class="column">
+            <img src="images/DSC_0228.jpg" style="width:100%">
+            <img src="images/DSC_0312.JPG" style="width:100%">
+            <img src="images/DSC_0316.JPG" style="width:100%">
+            <img src="images/DSC_0326 (1).JPG" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="images/12-09-04.jpg" style="width:100%">
+            <img src="images/12-09-55.jpg" style="width:100%">
+            <img src="images/123.jpg" style="width:100%">
+            <img src="images/13.jpg" style="width:100%">
+        </div>  
+        <div class="column">
+            <img src="images/36175.jpg" style="width:100%">
+            <img src="images/4587.jpg" style="width:100%">
+            <img src="images/6129.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="images/14-07-14.jpg" style="width:100%">
+            <img src="images/14-07-58.jpg" style="width:100%">
+            <img src="images/14-09-04.jpg" style="width:100%">
+            <img src="images/19.jpg" style="width:100%">
+        </div>
+    </div><br><br>
+    <div class="action">
+        <h1 class="our_founders">
+            Founders and team
+        </h1><br>
+    </div>
+    <div class="row_f">
+        <div class="column-f">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/founders/1.JPG" alt="founder-1">
+              </div>
+              <div class="flip-card-back">
+                <h2>Закалов Ігор Олександрович к.т.н.</h2> 
+                <p>Fund's founder and president</p>
+                <p><i>"I have been involved in professional IT education all my life because it is one of the most exciting and dynamic industries in the world.
+                    The projects I created have trained tens of thousands of IT professionals who work successfully around the world.
+                    That is why we created our Charity School in order to give you an opportunity to get acquainted with modern technologies.
+                    and start your IT career for those kids who can't do it themselves. Thanks to our programs, kids can
+                    get a quality IT education, master an interesting profession and find your place in the world."</i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-f">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/founders/2.jpg" alt="founder-2">
+              </div>
+              <div class="flip-card-back">
+                <h2>Мартинчук Дмитро</h2> 
+                <p>Co-founder and partner of the Fund</p><br> 
+                <p><i>"My father, who I am very proud of, was an orphan and a boarding school, and I, like my father,
+                    I know very well how difficult it is to achieve a life of harmony and purpose without support. The boarding school takes care of you,
+                    they try to replace their parents, but after graduation you become on your own with life's difficulties.
+                    After boarding, he went to study in construction VTU, after his graduation he worked hard on concrete
+                    only at the age of 31, with the support of my mother, was forced to go to the building institute in the evenings,
+                    after hard work in the factory, going for couples and at night drawing homework."</i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team">
+            <a href="">
+                All team   <i class="right"></i>
+            </a>    
+        </div>
+    </div>
+  </div><br><br><br><br>
+      <div class="action">
+        <h1 class="our_founders">
+            Activity results
+        </h1><br>
+      </div>
+    <div class="main_text">
+            <p class="about">
+                The Charity Foundation was founded in September 2016. During this time more than 1000 children from different IT fields were trained.
+                Also, more than 400 children have learned IT English.
+            </p>
+    </div><br>
+    <div class="sec_text">
+        <p class="more">
+            With the help of partners and donors of the Foundation, training, excursions to IT companies, internships, IT camps were organized and conducted. 
+        </p>
+    </div><br><br>
+    <div class="main_purpose">
+        <p>
+            The training takes place in the premises of the Foundation, the training programs are provided by a partner of the Foundation - <b>ІТ school Main School</b>. 
+        </p><br>
+    </div><br>
+
+    <div class="row-footer">
+      <div class="contact">
+        <h3>Contacts</h3>
+        <p>
+            Ukraine, 03039, Kiyv city Golosiyvska str., 17
+        </p>
+        <p>
+          <i class="fa fa-phone">  +38(050)3561666</i>
+        </p>
+        <p>
+          <i class="fa fa-envelope">  smartfuture.itcourses@gmail.com</i>
+        </p>
+      </div>
+      <div class="partners">
+        <h3>Our partners</h3>
+        <ul>
+          <li><a href="#">МБФ "Жизнь с избытком"</a></li>
+          <li><a href="#">Main Academy</a></li>
+          <li><a href="#">«Київський міський центр реабілітації дітей з інвалідністю»</a></li>
+          <li><a href="#">Svitla Systems</a></li>
+          <li><a href="#">Парк Наталка</a></li>
+        </ul>
+      </div>
+      <div class="references">
+        <h3>Referencies</h3>
+        <ul>
+          <li><a href="#">Inclusive-It</a></li>
+          <li><a href="#">Chudovo</a></li>
+          <li><a href="#">League of Tolerance Ліга Толерантності</a></li>
+          <li><a href="#">KidsGuide</a></li>
+          <li><a href="#">Pro Bono Club Ukraine</a></li>
+        </ul>
+      </div>
+    </div><br>
+    
+    
+    <footer>
+      <div class="foot-line">
+        <div class="nav-foot"><a href="index_en.html"><i class="fa fa-home"></i> Home</a></div>
+        <div class="nav-foot"><a href="about_en.html"><i class="fa fa-pencil-square-o"></i> About</a></div>
+        <div class="nav-foot"><a href="activity_en.html"><i class="fa fa-plus-square"></i> Activity</a></div>
+        <div class="nav-foot"><a href="cooperation_en.html"><i class="fa fa-handshake-o"></i> Cooperation</a></div>
+        <div class="nav-foot"><a href="blog_en.html"><i class="fa fa-commenting"></i> Blog</a></div>
+        <div class="nav-foot"><a href="contacts_en.html"><i class="fa fa-phone"></i> Contacts</a></div>
+      </div><br>
+      <div class="foot-nets">
+        <a href="https://www.facebook.com/rozumnemaybutne/?__tn__=%2Cd%2CP-R&eid=ARAvVo1Qo0rL7kUYVBfnU8B6CqoCz--98rx7xkDslXSFL9dySLYd2sekOWQM9vYDOeHij0qAHDoiDM5L"><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-telegram"></i></a>
+      </div><br><br>
+      <div class="copy-right">
+        <p>
+          <i class="fa fa-copyright"></i> Copyright All Right Reserved
+        </p>
+      </div>
+      <div class="design">
+        <p>
+          Designed by <b>Shaposhnyck Ihor</b>
+        </p>
+      </div>
+    </footer>
+    <script src="javascript/script.js"></script>
+    
+</body>
+</html>

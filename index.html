@@ -16,35 +16,22 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 <body>
-      <script>
-        window.onscroll = function() {myFunction()};
-
-          var navbar = document.getElementById("navbar");
-          var sticky = navbar.offsetTop;
-
-          function myFunction() {
-          if (window.pageYOffset >= sticky) {
-              navbar.classList.add("sticky")
-            } else {
-            navbar.classList.remove("sticky");
-            }
-        }
-      </script>
     <nav id="navbar">
-        <div class="logо">
-            <a href="index.html">
-                <img src="images/future_logo_black.png" alt="logo" height="auto" width="100px">
-            </a>
-        </div>
+        
         <div class="lang_select">
             <a href="index.html">
               Ukr
             </a>
-            <a href="index_ru.html">
+            <a href="index-ru.html">
               Ru
             </a>
-            <a href="index_en.html">
+            <a href="index-en.html">
               En
+            </a>
+        </div>
+        <div class="logо">
+            <a href="index.html">
+                <img class="logo-img" src="images/future_logo_black.png" alt="logo">
             </a>
         </div>
         <ul class="nav-links">
@@ -72,47 +59,30 @@
       <h1 class="intro-f2">"РОЗУМНЕ МАЙБУТНЄ"</h1>
     </div>
     <script>
-        window.onscroll = function() {myFunction()};
-
-          var navbar = document.getElementById("navbar");
-          var sticky = navbar.offsetTop;
-
-          function myFunction() {
-          if (window.pageYOffset >= sticky) {
-              navbar.classList.add("sticky")
-            } else {
-            navbar.classList.remove("sticky");
-            }
-    }
+        
     </script>
     <div class="container">
       <div class="mySlides">
-        <div class="numbertext">1 / 6</div>
         <img src="images/shkola.jpg" style="width:100%">
       </div>
     
       <div class="mySlides">
-        <div class="numbertext">2 / 6</div>
         <img src="images/main_future-1.jpg" style="width:100%">
       </div>
     
       <div class="mySlides">
-        <div class="numbertext">3 / 6</div>
         <img src="images/13.jpg" style="width:100%">
       </div>
         
       <div class="mySlides">
-        <div class="numbertext">4 / 6</div>
         <img src="images/19.jpg" style="width:100%">
       </div>
     
       <div class="mySlides">
-        <div class="numbertext">5 / 6</div>
         <img src="images/2.jpg" style="width:100%">
       </div>
         
       <div class="mySlides">
-        <div class="numbertext">6 / 6</div>
         <img src="images/15.jpg" style="width:100%">
       </div>
         
@@ -175,7 +145,7 @@
             captionText.innerHTML = dots[slideIndex-1].style.h1;
           }
       </script>
-    <div class="main_text" style="font-family: 'Roboto Condensed', sans-serif;">
+    <div class="main_text">
         <p class="about">
             Благодійний Фонд <b>«Благодійна школа “Розумне майбутнє”»</b> - це перша в Україні 
             Благодійна школа з особистого та ІТ розвитку дітей.
@@ -198,7 +168,7 @@
         <p class="more">
             Наша місія – здійснювати дитячі мрії та дарувати щасливе майбутнє. 
         </p>
-    </div><br><br>
+    </div><br>
     <div class="main_purpose">
         <p>
             Основна мета діяльності Фонду – надати можливість якісної освіти та особистого розвитку дітям та підліткам соціально незахищених верств населення: 
@@ -217,7 +187,7 @@
         <div class="net">
             <a href="https://www.facebook.com/rozumnemaybutne/?__tn__=%2Cd%2CP-R&eid=ARAvVo1Qo0rL7kUYVBfnU8B6CqoCz--98rx7xkDslXSFL9dySLYd2sekOWQM9vYDOeHij0qAHDoiDM5L" class="fa fa-facebook-square" aria-hidden="true"></a>
         </div>
-    </div><br><br>
+    </div><br>
     
     <div class="action" style="margin: 0 2vw;">
         <h1 class="our_activity">
@@ -280,8 +250,8 @@
         <h1 class="our_galary">
             Галерея 
         </h1><br>
-        <div class="gal_1" style="text-align: right; font-size: 2vh; padding-right: 2vw; color: black;">
-          <a href="about.html#galary-a" style="text-decoration: none; color: black;">
+        <div class="gal_1" style="text-align: right; font-size: 2vh; padding-right: 7vw; color: black;">
+          <a href="about.html" style="text-decoration: none; color: black;">
               Вся галерея  <i class="right"></i>
           </a>    
       </div><br>
@@ -291,25 +261,27 @@
             <img src="images/DSC_0228.jpg" style="width:100%">
             <img src="images/DSC_0312.JPG" style="width:100%">
             <img src="images/DSC_0316.JPG" style="width:100%">
-            <img src="images/DSC_0326 (1).JPG" style="width:100%">
         </div>
         <div class="column">
             <img src="images/12-09-04.jpg" style="width:100%">
             <img src="images/12-09-55.jpg" style="width:100%">
-            <img src="images/123.jpg" style="width:100%">
-            <img src="images/13.jpg" style="width:100%">
+            <img src="images/123.jpg" style="width:100%"> 
         </div>  
         <div class="column">
             <img src="images/36175.jpg" style="width:100%">
             <img src="images/4587.jpg" style="width:100%">
-            <img src="images/6129.jpg" style="width:100%">
         </div>
         <div class="column">
             <img src="images/14-07-14.jpg" style="width:100%">
             <img src="images/14-07-58.jpg" style="width:100%">
             <img src="images/14-09-04.jpg" style="width:100%">
-            <img src="images/19.jpg" style="width:100%">
+            
         </div>
+        <div class="column">
+          <img src="images/DSC_0326 (1).JPG" style="width:100%">
+          <img src="images/13.jpg" style="width:100%">
+          <img src="images/19.jpg" style="width:100%">
+      </div>
     </div><br><br>
     <div class="action">
         <h1 class="our_founders">
@@ -324,8 +296,8 @@
                 <img src="images/founders/1.JPG" alt="founder-1">
               </div>
               <div class="flip-card-back">
-                <h2>Закалов Ігор Олександрович к.т.н.</h2> 
-                <p>Засновник та Президент Фонду</p>
+                <h2>Закалов Ігор Олександрович <br>к.т.н.</h2> 
+                <p>Засновник та Президент Фонду</p><br>
                 <p><i>"Все своє життя я займаюся професійною ІТ - освітою, тому що це одна з найцікавіших та динамічних галузей у світі. 
                   Створювані мною проекти підготували десятки тисяч ІТ-спеціалістів,  які успішно працюють у всьому світі. 
                   Тому і нашу Благодійну школу ми створили для того, щоб надати можливість познайомитись з сучасними технологіями
@@ -387,7 +359,7 @@
       <div class="contact">
         <h3>Контакти</h3>
         <p>
-          Наша адреса: м.Київ, 03039, вул.Голосіївська, буд.17
+          Наша адреса: м. Київ, 03039, вул. Голосіївська, буд. 17
         </p>
         <p>
           <i class="fa fa-phone">  +38(050)3561666</i>

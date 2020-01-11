@@ -509,15 +509,28 @@ img {
   width: 90%;
   margin: auto;
 }
-.row_img:after {
+.row_img-i{
+  width: 100%;
+  margin: auto;
+}
+.row_img-i:after {
   content: "";
   display: table;
   clear: both;
 }
 
+.column-i {
+  float: left;
+  width: 16%;
+  margin-right: 0.8%;
+  border: 1px solid #2b9c57;
+}
 .column {
   float: left;
   width: 16%;
+}
+.column-i:last-child{
+  margin-right: 0;
 }
 .demo {
   opacity: 0.6;
@@ -1013,7 +1026,7 @@ img {
   .img-text{
     position: absolute;
     font-size: 1.5vh;
-    bottom: 35%;
+    bottom: 28%;
   }
   
 }

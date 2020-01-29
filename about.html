@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Acme|Chewy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
-<body>
-    <nav id="navbar">
-        
+<body class="about">
+    <nav id="navbar"> 
         <div class="lang_select">
             <a href="about.html">
               Ukr
@@ -28,23 +28,19 @@
             </a>
         </div>
         <div class="logо">
-            <a href="index.html">
+            <a href="about.html">
                 <img class="logo-img" src="images/future_logo_black.png" alt="logo">
             </a>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="about.html">Про фонд</a></li>
-            <li><a href="activity.html">Діяльність</a></li>
-            <li><a href="cooperation.html">Співпраця</a></li>
-            <li><a href="blog.html">Блог</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-            <li>
-              <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="Search.." name="search2">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
-            </li>
+        <ul id="nav" class="nav-links">
+            <li class="aboutlink"><a href="about.html">Про фонд</a></li>
+            <li class="activitylink"><a href="activity.html">Діяльність</a></li>
+            <li class="cooperationlink"><a href="cooperation.html">Співпраця</a></li>
+            <li class="bloglink"><a href="blog.html">Блог</a></li>
+            <li class="contactslink"><a href="contacts.html">Контакти</a></li>
+            <li><a class="fa fa-facebook" href="https://www.facebook.com/rozumnemaybutne/?__tn__=%2Cd%2CP-R&eid=ARAvVo1Qo0rL7kUYVBfnU8B6CqoCz--98rx7xkDslXSFL9dySLYd2sekOWQM9vYDOeHij0qAHDoiDM5L"></a></li>
+            <li><a class="fa fa-envelope" href="https://smartfuture.itcourses@gmail.com" target="_blank"></a></li>
+            <li><i class="fa fa-phone animated infinite jello delay-15s"></i><b class="tel">  +38 (050) 356-16-66</b></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -52,91 +48,121 @@
             <div class="line3"></div>
         </div>
     </nav>
-    <div class="intro">
-      <h1 class="intro-f1">БЛАГОДІЙНИЙ ФОНД</h1>
-      <h1 class="intro-f2">"РОЗУМНЕ МАЙБУТНЄ"</h1>
-    </div><br><br>
-    <div class="mission">
-        <div class="mission-col_1">
-           <h1 class="title_1">
-            Наша місія – здійснювати <br>дитячі мрії та дарувати <br> щасливе майбутнє
-           </h1> 
-        </div>
-        <div class="mission-col_2">
-            <ul class="breadcrumbs">
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="about.html">Про Фонд</a></li>
-            </ul>
-        </div>
+    <div class="end" style="margin-top: 10vh;"></div>
+    <div class="ttl" style="width: 60%; margin: auto; padding-left: 2.5vw; border-left: 0.2vw solid #072c15;">
+        <h1 class="title_2" >
+            Благодійний Фонд «Благодійна школа <i class="brain">“Розумне майбутнє”</i> » 
+        </h1>
     </div><br>
-    <div class="main-img">
-        <div class="bg-img">
-            <img src="images/11-33-49.jpg" alt="main-image" width="100%" height="auto">
-        </div>
-        <div class="img-text">
-            <h1 class="img-text_1">
-                Благодійний Фонд<br>
-                "Розумне майбутнє"
-            </h1>
-            <h3 class="img-text_2">
-                Наша місія – здійснювати дитячі мрії
-            </h3>
-        </div>
-    </div><br><br>
     <div class="contain">
         <div class="col-img">
-            <img src="images/DSC_0326 (1).JPG" alt="image" width="100%" height="auto">
+            <div id="slidy-container">
+                <figure id="slidy">
+                  <img src="images/29.jpg" alt="img-1" >
+                  <img src="images/DSC_0228.jpg" alt="img-2" >
+                  <img src="images/19.jpg" alt="img-3" >
+                  <img src="images/33.jpg" alt="img-4" >
+                </figure>
+              </div>
         </div>
-        <div class="text-about">
-            <h1 class="title_2">
-                Благодійний Фонд «Благодійна школа <br> <i class="brain">“Розумне майбутнє”</i> » 
-            </h1>
-            <div class="line"></div>
-            <p class="text_ab">
-                це перша в Україні Благодійна школа з особистого та ІТ розвитку дітей. 
+        <script>
+        var timeOnSlide = 3, 		
+        timeBetweenSlides = 1, 	
+    
+        animationstring = 'animation',
+        animation = false,
+        keyframeprefix = '',
+        domPrefixes = 'Webkit Moz O Khtml'.split(' '), 
+        pfx  = '',
+        slidy = document.getElementById("slidy"); 
+        if (slidy.style.animationName !== undefined) { animation = true; } 
+
+        if( animation === false ) {
+        for( var i = 0; i < domPrefixes.length; i++ ) {
+        if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
+      pfx = domPrefixes[ i ];
+      animationstring = pfx + 'Animation';
+      keyframeprefix = '-' + pfx.toLowerCase() + '-';
+      animation = true;
+      break;
+                }
+            }
+        }
+
+            if( animation === false ) {
+            
+            } else {
+            var images = slidy.getElementsByTagName("img"),
+                firstImg = images[0], 
+                
+                imgWrap = firstImg.cloneNode(false);  
+            slidy.appendChild(imgWrap); 
+            var imgCount = images.length, 
+                totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1),
+                slideRatio = (timeOnSlide / totalTime)*100,
+                moveRatio = (timeBetweenSlides / totalTime)*100, 
+                basePercentage = 100/imgCount, 
+                position = 0,
+                css = document.createElement("style"); 
+            css.type = "text/css";
+            css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; 
+            css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+            css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n"; 
+            for (i=0;i<(imgCount-1); i++) { 
+                position+= slideRatio;
+                css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
+                position += moveRatio; 
+                css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
+            }
+            css.innerHTML += "}\n";
+            css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; 
+            document.body.appendChild(css); 
+            }
+
+        </script>
+        <div class="text-about">  
+            <p class="text_ab" style="border-top: 0.2vw solid #072c15;">
+                Благодійний Фонд «Благодійна школа “Розумне майбутнє”» це перша в Україні Благодійна школа з особистого та ІТ розвитку дітей. 
                 Ми надаємо можливість дітям незахищених верств населення познайомитися з мережевими і хмарними технологіями,
                 розробкою програмного забезпечення, програмуванням роботів, а також зробити перші кроки у розвитку своєї 
                 кар'єри раніше більшості однолітків. 
             </p>
+            <p class="text_ab">
+                Навчальні програми Благодійної школи «Розумне майбутнє» розроблені спеціально для школярів як молодших, так і старших класів. 
+                Програми знайомлять дітей з сучасними технологіями, з життям в сучасному інформаційному світі та різноманіттям можливостей у ньому. 
+                Усі програми мають практичну спрямованість та готують до майбутньої роботи в ІТ – галузі.
+            </p>
+            <p class="text_ab">
+                Основна мета діяльності Фонду – надати можливість якісної освіти та особистого розвитку дітям та підліткам соціально незахищених верств населення:
+            </p>
+            <ul class="list_ab" >
+                <li>дітей-сиріт</li>
+                <li>дітей-інвалідів</li>
+                <li>дітей із багатодітних сімей (що мають 5-ро або більше дітей)</li>
+                <li>дітей військових, що загинули або отримали поранення несумісні з роботою</li>
+            </ul>
         </div>
-    </div>
-    <p class="text_ab2">
-        Навчальні програми Благодійної школи «Розумне майбутнє» розроблені спеціально для школярів як молодших, так і старших класів. 
-        Програми знайомлять дітей з сучасними технологіями, з життям в сучасному інформаційному світі та різноманіттям можливостей у ньому. 
-        Усі програми мають практичну спрямованість та готують до майбутньої роботи в ІТ – галузі.
-    </p><br>
-    <div class="sec_text" style="margin-left: 12vw;">
-        <p class="more">
-            Наша місія – здійснювати дитячі мрії та дарувати щасливе майбутнє. 
-        </p>
-    </div><br><br>
-    <p class="text_ab2">
-        Основна мета діяльності Фонду – надати можливість якісної освіти та особистого розвитку дітям та підліткам соціально незахищених верств населення:
-    </p><br>
-    <ul class="list_ab">
-        <li>дітей-сиріт</li>
-        <li>дітей-інвалідів</li>
-        <li>дітей із багатодітних сімей (що мають 5-ро або більше дітей)</li>
-        <li>дітей військових, що загинули або отримали поранення несумісні з роботою</li>
-    </ul><br>
+    </div><br>
+    
+    
     <p class="text_ab2">
         З цією метою Благодійний Фонд «Благодійна школа “Розумне майбутнє”» залучає кошти від благодійників, 
         організовує навчальний процес, розробляє та реалізує навчальні програми. Ми зосередили свої зусилля 
-        на навчанні сучасним технологіям, тому що ІТ – галузь є найстабільнішою, найприбутковішою ті найперспективнішою з усіх галузей.
-    </p><br>
+        на навчанні сучасним технологіям, тому що ІТ – галузь є найстабільнішою, найприбутковішою та найперспективнішою з усіх галузей.
+    </p>
     <p class="text_ab2">
-        Форми і методи реалізації програми: <b><i>аудиторні заняття, лабораторні роботи, тренінги, екскурсії, майстеркласи, 
-        мотивуючі виступи, творчі проекти і завдання, дискусії, мозкові штурми, ігри, домашні завдання, стажування тощо.</i></b>
-    </p><br>
-    <div class="sec_text" style="margin-left: 12vw;">
+        Форми і методи реалізації програми: <i>аудиторні заняття, лабораторні роботи, тренінги, екскурсії, майстеркласи, 
+        мотивуючі виступи, творчі проекти і завдання, дискусії, мозкові штурми, ігри, домашні завдання, стажування тощо.</i>
+    </p>
+    <div class="sec_text" style="margin-left: 5vw;">
         <p class="more">
             Запрошуємо благодійників підтримати наші проекти та допомогти дітям <br>зробити перші кроки в ІТ й отримати якісну ІТ-освіту, а, можливо, і першу роботу. 
         </p>
-    </div><br><br>
+    </div><br>
      
     <div class="action">
         <h1 class="our_founders" style="padding-left: 11vw;">
-            Засновники та команда
+            Засновники фонду
         </h1><br>
     </div>
     <div class="row_f" style="padding-left: 1vw;">
@@ -177,65 +203,137 @@
             </div>
           </div>
         </div>
-        <div class="team">
-            <a href="">
-                Вся команда  <i class="right"></i>
-            </a>    
-        </div>
     </div>
   </div><br><br><br><br>
-  <div class="action">
+  <!--<div class="action">
     <h1 class="our_founders" style="padding-left: 11vw;">
         Наглядова рада
     </h1><br>
-    <p class="text_ab2">
-        В процесі формування
-    </p><br>
-  </div>
+    <section class="section-6">
+        <div class="row">
+          <figure class="figure">
+            <img src="images/background.png">
+            <figcaption>
+              <h3>Наглядач 1</h3>
+                <p>
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
+                  maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
+                </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+          <figure class="figure">
+            <img src="images/background.png">
+            <figcaption>
+              <h3>Наглядач 2</h3>
+              <p>
+                  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit laudantium dignissimos doloribus. 
+                  Accusamus magnam dolor illo dignissimos, amet sunt nemo, cupiditate, voluptates omnis reiciendis quidem voluptatum neque quam rerum? Suscipit!
+                </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+          <figure class="figure">
+            <img src="images/background.png">
+            <figcaption>
+              <h3>Наглядач 3</h3>
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
+                maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
+                </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+          <figure class="figure">
+            <img src="images/background.png">
+            <figcaption>
+              <h3>Наглядач 4</h3>
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
+                maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
+                </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        </div>
+      </section>
+      
+  </div>-->
 <div class="action">
     <h1 class="our_founders" style="padding-left: 11vw;">
         Результати діяльності
     </h1><br>
-    <div class="main-img">
-        <div class="bg-img">
-            <img src="images/123.jpg" alt="main-image" width="100%" height="auto">
-        </div>
-        <div class="img-text">
-            <h1 class="img-text_1">
-                Благодійний Фонд<br>
-                "Розумне майбутнє"
-            </h1>
-            <h3 class="img-text_2">
-                Наша місія – здійснювати дитячі мрії
-            </h3>
-        </div>
-    </div><br><br>
-    <p class="text_ab2">
-        Благодійний Фонд був заснований у вересні  2016 року. За цей час було проведене навчання більш 
-        ніж 1000 дітей з різних ІТ – напрямків. Також більш ніж 400 дітей вивчили ІТ-англійску мову.
-    </p>
   </div>
   <div class="contain">
     <div class="col-img">
-        <img src="images/125.jpg" alt="image" width="100%" height="auto">
+        <img src="images/125.jpg" alt="image" width="100%" height="auto" style="border: 0.2vw solid #072c15; box-shadow: 5px 8px 10px 3px #888888;">
     </div>
     <div class="text-about">
         <p class="text_ab">
+            Благодійний Фонд був заснований у вересні  2016 року. За цей час було проведене навчання більш 
+            ніж 1000 дітей з різних ІТ – напрямків. Також більш ніж 400 дітей вивчили ІТ-англійску мову.
+        </p>
+        <p class="text_ab">
             Навчання проходить в приміщеннях Фонду, навчальні програми надає партнер Фонду - ІТ школа Main School. 
-        </p><br><br>
+        </p><br>
         <p class="text_ab">
             Завдяки допомозі партнерів та донорів Фонду було організовано та проведено навчання, екскурсії до ІТ-компаній, стажування, ІТ-табори. 
         </p>
     </div>
-  </div><br><br>
+  </div><br>
   <div class="action">
     <h1 class="our_galary" style="padding-left: 11vw;">
       Історії успіху
     </h1><br>
   </div><br>
-  <p class="text_ab2">
-    (Тут будуть історії успіху наших дітей та випускників - Маша. Опросить выпускников (по возможности) – кто где, чем помогло и тп)
-  </p><br><br>
+  <div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(images/6129.jpg)"></div>
+    </div>
+    <div class="description">
+      <h1>Компанієць Олександр</h1>
+        <p class="text_ab"> 
+            Прийміть мою велику вдячність за те, що мій син Компанієць Олександр має можливість розвиватися і навчатися в ІТ сфері. Завдяки Вам він отримав неабияку
+            ерудицію в сучасних технологіях, це допоможе йому як у розумовому розвитку так і в виборі подальшої професії.
+        </p>
+    </div>
+  </div><br>
+  <div class="blog-card alt">
+    <div class="meta">
+      <div class="photo" style="background-image: url(images/2211.jpg)"></div>
+    </div>
+    <div class="description">
+      <h1>Пересунько Богдана</h1>
+        <p class="text_ab">
+            Навчаюся в ІТ-школі вже третій рік, хочу подякувати БФ « Розумне майбутнє» за таку можливість. Я мріяла навчитися програмувати і моя мрія збулася!!!!!!
+            Планую продовжити навчатися і задоволенням здобувати нові знання.
+        </p>
+    </div>
+  </div><br>
+  <div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(images/3344.jpg); height: 150%;"></div>
+    </div>
+    <div class="description">
+      <h1>Черкас Владислав</h1>
+        <p class="text_ab"> 
+            ІТ-школа вихідного дня дала мені можливість пізнати основні напрямки ІТ технологій, за що я дуже вдячний. Навчаючись ІТ-школі, я зрозумів в якому напрямку хочу в
+            подальшому розвиватися і по закінченню школи планую поступити ВНЗ за напрямком ІТ-технологій.
+        </p>
+    </div>
+  </div><br>
+  <div class="blog-card alt">
+    <div class="meta">
+      <div class="photo" style="background-image: url(images/IT-technologies/IT-01.jpg)"></div>
+    </div>
+    <div class="description">
+      <h1>Франко Юрій</h1>
+        <p class="text_ab">
+            Після успішного завершення навчання у ІТ-школі вихідного дня, визначився з майбутньою професією і поставив перед собою ціль стати успішним
+            ІТ-спеціалістом. На сьогоднішній день Юрій навчається у ВНЗ з ІТ-спеціалізацією.
+        </p>
+    </div>
+  </div><br>
     <div class="action" id="galary-a">
         <h1 class="our_galary" style="padding-left: 11vw;">
             Галерея 
@@ -283,9 +381,6 @@
         </a>
     </div>  
     <div class="column">
-        <a target="_blank" href="images/36175.jpg">
-            <img class="gal" src="images/36175.jpg" style="width:100%; margin-bottom: 2.2vh;">
-        </a>
         <a target="_blank" href="images/4587.jpg">
             <img class="gal" src="images/4587.jpg" style="width:100%; margin-bottom: 2.2vh;">
         </a>
@@ -297,6 +392,9 @@
         </a>
         <a target="_blank" href="images/6736.jpg"> 
             <img class="gal" src="images/6736.jpg" style="width:100%; margin-bottom: 2.2vh;">
+        </a>
+        <a target="_blank" href="images/36175.jpg">
+            <img class="gal" src="images/36175.jpg" style="width:100%; margin-bottom: 2.2vh;">
         </a>
     </div>
     <div class="column">
@@ -336,81 +434,41 @@
             <img class="gal" src="images/DSC_0322.JPG" style="width:100%; margin-bottom: 2vh;">
         </a>
     </div>
-</div><br><br>
-    <div class="action">
-        <h1 class="our_galary" style="padding-left: 11vw;">
-          Нагороди  
-        </h1><br>
-    </div>
-    <div class="main-img">
-        <div class="bg-img">
-            <img src="images/124.jpg" alt="main-image" width="100%" height="auto">
-        </div>
-        <div class="img-text">
-            <h1 class="img-text_1">
-                Благодійний Фонд<br>
-                "Розумне майбутнє"
-            </h1>
-            <h3 class="img-text_2">
-                Наша місія – здійснювати дитячі мрії
-            </h3>
-        </div>
-    </div><br><br><br><br>
-    <p class="text_ab2">
-        Листи подяки, грамоти тощо – Наташа
-    </p><br><br>
+    </div><br><br>
+            <!--<div class="action">
+                <h1 class="our_galary" style="padding-left: 11vw;">
+                Нагороди  
+                </h1><br>
+            </div>
+            <div class="main-img">
+                <div class="bg-img">
+                    <img src="images/124.jpg" alt="main-image" width="100%" height="auto">
+                </div>
+            </div><br>-->
+    
 
-    <div class="row-footer">
-        <div class="contact">
+        <div class="contact" style="margin-left: 5vw;">
           <h3>Контакти</h3>
           <p>
-            Наша адреса: м.Київ, 03039, вул.Голосіївська, буд.17
+            Наша адреса: м. Київ, 03039, вул. Голосіївська, буд. 17
           </p>
           <p>
-            <i class="fa fa-phone">  +38(050)3561666</i>
+            <i class="fa fa-phone">  +38(050) 356-16-66</i>
           </p>
           <p>
             <i class="fa fa-envelope">  smartfuture.itcourses@gmail.com</i>
           </p>
         </div>
-        <div class="partners">
-          <h3>Наші партнери</h3>
-          <ul>
-            <li><a href="#">МБФ "Жизнь с избытком"</a></li>
-            <li><a href="#">Main Academy</a></li>
-            <li><a href="#">«Київський міський центр реабілітації дітей з інвалідністю»</a></li>
-            <li><a href="#">Svitla Systems</a></li>
-            <li><a href="#">Парк Наталка</a></li>
-          </ul>
-        </div>
-        <div class="references">
-          <h3>Посилання</h3>
-          <ul>
-            <li><a href="#">Inclusive-It</a></li>
-            <li><a href="#">Chudovo</a></li>
-            <li><a href="#">League of Tolerance Ліга Толерантності</a></li>
-            <li><a href="#">KidsGuide</a></li>
-            <li><a href="#">Pro Bono Club Ukraine</a></li>
-          </ul>
-        </div>
-      </div><br>
-      
+        <br><br><br>
       
       <footer>
         <div class="foot-line">
-          <div class="nav-foot"><a href="index.html"><i class="fa fa-home"></i> Головна</a></div>
-          <div class="nav-foot"><a href="about.html"><i class="fa fa-pencil-square-o"></i> Про фонд</a></div>
-          <div class="nav-foot"><a href="activity.html"><i class="fa fa-plus-square"></i> Діяльність</a></div>
-          <div class="nav-foot"><a href="cooperation.html"><i class="fa fa-handshake-o"></i> Співпраця</a></div>
-          <div class="nav-foot"><a href="blog.html"><i class="fa fa-commenting"></i> Блог</a></div>
-          <div class="nav-foot"><a href="contacts.html"><i class="fa fa-phone"></i> Контакти</a></div>
+          <div class="nav-foot about-f"><a href="about.html"><i class="fa fa-pencil-square-o"></i> Про фонд</a></div>
+          <div class="nav-foot activity-f"><a href="activity.html"><i class="fa fa-plus-square"></i> Діяльність</a></div>
+          <div class="nav-foot cooperation-f"><a href="cooperation.html"><i class="fa fa-handshake-o"></i> Співпраця</a></div>
+          <div class="nav-foot blog-f"><a href="blog.html"><i class="fa fa-commenting"></i> Блог</a></div>
+          <div class="nav-foot contacts-f"><a href="contacts.html"><i class="fa fa-phone"></i> Контакти</a></div>
         </div><br>
-        <div class="foot-nets">
-          <a href="https://www.facebook.com/rozumnemaybutne/?__tn__=%2Cd%2CP-R&eid=ARAvVo1Qo0rL7kUYVBfnU8B6CqoCz--98rx7xkDslXSFL9dySLYd2sekOWQM9vYDOeHij0qAHDoiDM5L"><i class="fa fa-facebook"></i></a>
-          <a href=""><i class="fa fa-twitter"></i></a>
-          <a href=""><i class="fa fa-instagram"></i></a>
-          <a href=""><i class="fa fa-telegram"></i></a>
-        </div><br><br>
         <div class="copy-right">
           <p>
             <i class="fa fa-copyright"></i> Copyright All Right Reserved

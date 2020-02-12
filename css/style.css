@@ -273,10 +273,10 @@ nav {
     width: 90%;
     padding: 5px;
     margin: auto;
-    text-align: justify;
-    font-size: 15px;
-    letter-spacing: 2px;
-    font-weight: lighter;
+    text-align: left;
+    font-size: 2vh;
+    letter-spacing: 0.2vw;
+    font-weight: bolder;
     color: #1b201d;
   }
 
@@ -465,13 +465,12 @@ nav {
   }
 
   .main_purpose p {
-    width: 90%;
-    padding: 5px;
-    margin: auto;
-    text-align: justify;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: lighter;
+    width: 98%;
+    margin-left: 0.5vw;
+    text-align: left;
+    font-size: 2.5vh;
+    letter-spacing: 0.3vw;
+    font-weight: bolder;
     color: #1c241f;
   }
 
@@ -1120,7 +1119,7 @@ img {
 
 .mission {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
 }
@@ -1196,18 +1195,31 @@ img {
   display: flex;
   width: 90%;
   margin: auto;
-  justify-content: space-around; 
+  justify-content: space-between; 
 }
 .col-img {
   width: 100%;
+}
+.col-img a{
   margin: auto;
+}
+.col-img-p{
+  width: 100%;
+  text-align: center;
 }
 .col-imge {
   width: 100%;
   margin: auto;
 }
+.ttl{
+  width: 60%;
+  margin-left: 6vw;
+  padding-left: 2.5vw;
+  border-left: 0.2vw solid #072c15;
+  margin-top: 2vh;
+}
 .title_2 {
-  font-size: 3.4vh;
+  font-size: 3.5vh;
 }
 
 .brain {
@@ -1232,11 +1244,12 @@ img {
 
 @media screen and (max-width:650px) {
   .title_2 {
-    font-size: 1.5vh;
+    font-size: 3vh;
+    font-weight: bold;
   }
 
   .end {
-    margin-top: 3vh;
+    margin-top: 8.8vh;
   }
 }
 
@@ -1318,12 +1331,14 @@ img {
   .col-img {
     width: 100%;
   }
+  .col-img-p{
+    width: 100%;
+    text-align: center;
+  }
   .col-imge {
     width: 100%;
   }
-  .col-img a img{
-    margin: auto;
-  }
+
 }
 
 .gal {

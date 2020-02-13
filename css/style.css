@@ -856,6 +856,8 @@ img {
 .container-f {
   position: relative;
   width: 90%;
+  border: 0.5vw solid #072c15;
+  box-shadow: 2px 8px 10px 3px #888888;
 }
 
 .imge {
@@ -904,6 +906,7 @@ img {
     overflow: hidden;
   }
   .container-f {
+    width: 100%;
     margin: auto;
   }
 }
@@ -937,13 +940,15 @@ img {
     width: 100%;
     margin: auto;
     overflow: hidden;
-    padding: 1vh;
+    padding: 1.8vh;
+    text-align: center;
   }
   .imge{
-    width: 110%;
+    width: 100%;
+    margin: auto;
   }
   .overlay{
-    width: 110%;
+    width: 100%;
   }
   .text-f h3{
     font-size: 2.6vh;
@@ -954,7 +959,7 @@ img {
     text-align: center;
   }
   .text-f .text_ab3{
-    font-size: 2.1vh;
+    font-size: 2vh;
     font-style: italic;
     font-weight: bolder;
   }

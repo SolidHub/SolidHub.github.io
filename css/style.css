@@ -151,7 +151,6 @@ nav {
 #slidy-container {
   width: 90%;
   overflow: hidden;
-  margin: auto;
   border: 0.2vw solid #072c15;
   box-shadow: 5px 8px 10px 3px #888888;
 }
@@ -284,7 +283,6 @@ nav {
     font-size: 15px;
   }
 
-  .activity,
   .galary,
   .founders {
     margin-left: 20px;
@@ -760,12 +758,13 @@ img {
   width: 100%;
   border: none;
   text-align: left;
+  vertical-align: middle;
   outline: none;
   font-size: 2.5vh;
   transition: 0.4s;
   margin-bottom: 2vh;
   margin-top: 1vh;
-  height: 10vh;
+  height: 7vh;
   border-radius: 2vh;
   box-shadow: 5px 8px 10px 3px #888888;
 }
@@ -888,7 +887,15 @@ img {
   transform: translate(-50%, -50%);
   text-align: justify;
 }
-
+.text-act1{
+  width: 168%;
+}
+.text-act2{
+  width: 75%;
+}
+.text-act3{
+  width: 255%;
+}
 
 @media screen and (max-width:1450px) {
 
@@ -909,7 +916,11 @@ img {
     margin: auto;
     overflow: hidden;
   }
-
+  .text-act1,
+  .text-act2,
+  .text-act3{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:900px) {}
@@ -1196,6 +1207,10 @@ img {
 }
 .col-img {
   width: 100%;
+}
+.col-img img{
+  box-shadow: 5px 8px 10px 3px #888888;
+  margin-top: 2.5vh;
 }
 .col-img a{
   margin: auto;

@@ -150,6 +150,7 @@ nav {
 
 #slidy-container {
   width: 90%;
+  margin: auto;
   overflow: hidden;
   border: 0.2vw solid #072c15;
   box-shadow: 5px 8px 10px 3px #888888;
@@ -1207,10 +1208,12 @@ img {
 }
 .col-img {
   width: 100%;
+  
 }
 .col-img img{
   box-shadow: 5px 8px 10px 3px #888888;
   margin-top: 2.5vh;
+  text-align: center;
 }
 .col-img a{
   margin: auto;
@@ -1222,6 +1225,7 @@ img {
 .col-imge {
   width: 100%;
   margin: auto;
+  text-align: center;
 }
 .ttl{
   width: 60%;
@@ -1352,6 +1356,7 @@ img {
   }
   .col-imge {
     width: 100%;
+    text-align: center;
   }
 }
 

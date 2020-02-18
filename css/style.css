@@ -504,11 +504,6 @@ nav {
 
   }
 
-  .panel ul li {
-    font-size: 5px;
-
-  }
-
   .fa-laptop,
   .fa-desktop,
   .fa-gamepad,
@@ -1296,15 +1291,16 @@ img {
   font-size: 1vw;
   font-weight: lighter;
 }
-
-.list_ab {
+.list_ab2 {
   width: 90%;
   margin: auto;
   text-align: justify;
   font-size: 1.1vw;
-  padding-left: 2vw;
-  font-weight: lighter;
+  padding-left: 1vw;
 }
+
+
+
 @media screen and (max-width:350px) {
   .text_ab {
     font-size: 2vh;
@@ -1335,6 +1331,10 @@ img {
   }
 
   .list_ab {
+    font-size: 2.5vh;
+    font-weight: bolder;
+  }
+  .list_ab2 li{
     font-size: 2.5vh;
     font-weight: bolder;
   }

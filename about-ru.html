@@ -15,272 +15,286 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 <body class="about">
-    <nav id="navbar"> 
-        <div class="lang_select">
-            <a href="about.html">
-              Ukr
-            </a>
-            <a href="about-ru.html">
-              Ru
-            </a>
-            <a href="about-en.html">
-              En
-            </a>
-        </div>
-        <div class="logо">
-            <a href="about.html">
-                <img class="logo-img" src="images/future_logo_black.png" alt="logo">
-            </a>
-        </div>
-        <ul id="nav" class="nav-links">
-            <li class="aboutlink"><a href="about-ru.html">Про фонд</a></li>
-            <li class="activitylink"><a href="activity-ru.html">Деятельность</a></li>
-            <li class="cooperationlink"><a href="cooperation-ru.html">Сотрудничество</a></li>
-            <li class="bloglink"><a href="blog-ru.html">Блог</a></li>
-            <li class="contactslink"><a href="contacts-ru.html">Контакты</a></li>
-            <li><a class="fa fa-facebook" href="https://www.facebook.com/rozumnemaybutne/?__tn__=%2Cd%2CP-R&eid=ARAvVo1Qo0rL7kUYVBfnU8B6CqoCz--98rx7xkDslXSFL9dySLYd2sekOWQM9vYDOeHij0qAHDoiDM5L"></a></li>
-            <li><a class="fa fa-envelope" href="https://smartfuture.itcourses@gmail.com" target="_blank"></a></li>
-            <li><i class="fa fa-phone animated infinite jello delay-15s"></i><b class="tel">  +38 (050) 356-16-66</b></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
-    <div class="end" style="margin-top: 10vh;"></div>
-    <div class="ttl" style="width: 60%; margin: auto; padding-left: 2.5vw; border-left: 0.2vw solid #072c15;">
-        <h1 class="title_2" >
-            Благотворительный Фонд «Благотворительная школа <i class="brain">“Разумное будущее”</i> » 
-        </h1>
-    </div><br>
-    <div class="contain">
-        <div class="col-img">
-            <div id="slidy-container">
-                <figure id="slidy">
-                  <img src="images/29.jpg" alt="img-1" >
-                  <img src="images/DSC_0228.jpg" alt="img-2" >
-                  <img src="images/19.jpg" alt="img-3" >
-                  <img src="images/33.jpg" alt="img-4" >
-                </figure>
-              </div>
-        </div>
-        <script>
-        var timeOnSlide = 3, 		
-        timeBetweenSlides = 1, 	
-    
-        animationstring = 'animation',
-        animation = false,
-        keyframeprefix = '',
-        domPrefixes = 'Webkit Moz O Khtml'.split(' '), 
-        pfx  = '',
-        slidy = document.getElementById("slidy"); 
-        if (slidy.style.animationName !== undefined) { animation = true; } 
-
-        if( animation === false ) {
-        for( var i = 0; i < domPrefixes.length; i++ ) {
-        if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
-      pfx = domPrefixes[ i ];
-      animationstring = pfx + 'Animation';
-      keyframeprefix = '-' + pfx.toLowerCase() + '-';
-      animation = true;
-      break;
-                }
-            }
-        }
-
-            if( animation === false ) {
-            
-            } else {
-            var images = slidy.getElementsByTagName("img"),
-                firstImg = images[0], 
-                
-                imgWrap = firstImg.cloneNode(false);  
-            slidy.appendChild(imgWrap); 
-            var imgCount = images.length, 
-                totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1),
-                slideRatio = (timeOnSlide / totalTime)*100,
-                moveRatio = (timeBetweenSlides / totalTime)*100, 
-                basePercentage = 100/imgCount, 
-                position = 0,
-                css = document.createElement("style"); 
-            css.type = "text/css";
-            css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; 
-            css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
-            css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n"; 
-            for (i=0;i<(imgCount-1); i++) { 
-                position+= slideRatio;
-                css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
-                position += moveRatio; 
-                css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
-            }
-            css.innerHTML += "}\n";
-            css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; 
-            document.body.appendChild(css); 
-            }
-
-        </script>
-        <div class="text-about">  
-            <p class="text_ab" style="border-top: 0.2vw solid #072c15;">
-                Благотворительный Фонд «Благотворительная школа “Разумное будущее”» это першая в Украине благотворительная школа по индивидуальному и ІТ развитию детей. 
-                Мы предоставляем возможность детям незащищенных слоев населения познакомиться с сетевыми и облачными технологиями,
-                разработкой программного обеспечения, программированием роботов, а также сделать первые шаги в развитии своей
-                карьеры раньше большинства сверстников. 
-            </p>
-            <p class="text_ab">
-                Учебные программы благотворительной школы «Разумное будущее» разработаны специально для школьников как младших, так и старших классов.
-                Программы знакомят детей с современными технологиями, с жизнью в современном информационном мире и многообразием возможностей в нем.
-                Все программы имеют практическую направленность и готовят к будущей работе в IT - отрасли.
-            </p>
-            <p class="text_ab">
-                Основная цель деятельности Фонда - предоставить возможность качественного образования и личностного развития детям и подросткам социально незащищенных слоев населения:
-            </p>
-            <ul class="list_ab" >
-                <li>детей-сирот</li>
-                <li>детей-инвалидов</li>
-                <li>детей из многодетных семей (которые имеют 5-ро или больше детей)</li>
-                <li>детей военных, погибших или получивших ранения несовместимые с работой</li>
-            </ul>
-        </div>
-    </div><br>
-    
-    
-    <p class="text_ab2">
-        С этой целью Благотворительный Фонд «Благотворительная школа "Разумное будущее"» привлекает средства от благотворителей,
-        организует учебный процесс, разрабатывает и реализует учебные программы. Мы сосредоточили свои усилия
-        на обучении современным технологиям, так как IT - отрасль является самой стабильной, самой прибыльной и перспективной из всех отраслей.
-    </p>
-    <p class="text_ab2">
-        Формы и методы реализации программы <i> аудиторные занятия, лабораторные работы, тренинги, экскурсии, мастер-классы,
-        мотивирующие выступления, творческие проекты и задачи, дискуссии, мозговые штурмы, игры, домашние задания, стажировки и тому подобное.</i>
-    </p>
-    <div class="sec_text" style="margin-left: 5vw;">
-        <p class="more">
-            Приглашаем благотворителей поддержать наши проекты и помочь детям <br> сделать первые шаги в IT и получить качественное IT-образование, а, возможно, и первую работу. 
-        </p>
-    </div><br>
-     
-    <div class="action">
-        <h1 class="our_founders" style="padding-left: 11vw;">
-            Основатели фонда
-        </h1><br>
+  <nav id="navbar">
+    <div class="lang_select">
+      <a href="about.html">
+        Ukr
+      </a>
+      <a href="about-ru.html">
+        Ru
+      </a>
+      <a href="about-en.html">
+        En
+      </a>
     </div>
-    <div class="row_f" style="padding-left: 1vw;">
-        <div class="column-f">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="images/founders/1.JPG" alt="founder-1">
-              </div>
-              <div class="flip-card-back">
-                <h2>Закалов Игорь Александрович <br>к.т.н.</h2> 
-                <p>Основатель и Президент Фонда</p><br> 
-                <p><i>"Всю свою жизнь я занимаюсь профессиональным IT-образованием, потому что это одна из самых интересных и динамичных отраслей в мире.
-                    Созданные мной проекты подготовили десятки тысяч IT-специалистов, которые успешно работают во всем мире.
-                    Поэтому и нашу Благотворительную школу мы создали для того, чтобы предоставить возможность ознакомиться с современными технологиями
-                    и начать свою IT-карьеру тем детям, кто не может самостоятельно этого сделать. Благодаря нашим программам дети смогут
-                    получить качественное IT-образование, овладеть профессией и найти свое место в мире."</i></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column-f">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="images/founders/2.jpg" alt="founder-2">
-              </div>
-              <div class="flip-card-back">
-                <h2>Мартынчук Дмитрий</h2> 
-                <p>Cоучредитель и парнер Фонда</p><br> 
-                <p><i>"Мой отец, которым я очень горжусь, был сиротой и учился в школе-интернате и я, на примере отца,
-                    очень хорошо знаю как трудно достигать жизненной гармонии и цели без поддержки. В интернате о тебе заботятся,
-                    пытаются заменить родителей, но после выпуска ты остаешься один на один с жизненными трудностями.
-                    После интерната он пошел учиться в строительное ПТУ, после его окончания тяжело работал на железобетонном
-                    комбинате и только в 31 год при поддержке моей мамы был вынужден поступить в строительный институт и по вечерам,
-                    после трудной работы на заводе, шел на пары, и по ночам чертил домашние задания."</i></p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="logо">
+      <a href="about.html">
+        <img class="logo-img" src="images/future_logo_black.png" alt="logo">
+      </a>
     </div>
-  </div><br><br><br><br>
-  <!--<div class="action">
+    <ul id="nav" class="nav-links">
+      <li class="aboutlink"><a href="about-ru.html">Про фонд</a></li>
+      <li class="activitylink"><a href="activity-ru.html">Деятельность</a></li>
+      <li class="cooperationlink"><a href="cooperation-ru.html">Сотрудничество</a></li>
+      <li class="bloglink"><a href="blog-ru.html">Блог</a></li>
+      <li class="contactslink"><a href="contacts-ru.html">Контакты</a></li>
+      <li><a class="fa fa-facebook" target="_blank"
+          href="https://www.facebook.com/rozumnemaybutne/?__tn__=%2Cd%2CP-R&eid=ARAvVo1Qo0rL7kUYVBfnU8B6CqoCz--98rx7xkDslXSFL9dySLYd2sekOWQM9vYDOeHij0qAHDoiDM5L"
+          style="color:#1e7cbb;"></a></li>
+      <li><a class="fa fa-envelope" href="https://gmail.com" target="_blank" style="color:#492864;"></a></li>
+      <li><i class="fa fa-phone animated infinite jello delay-15s"></i><b class="tel"> +38 (050) 356-16-66</b></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <div class="end"></div>
+  <div class="ttl">
+    <h1 class="title_2"> Благотворительная школа <p class="brain"><i> "Разумное будущее"</i></p>
+    </h1>
+  </div><br>
+  <div class="contain">
+    <div class="col-imge">
+      <div id="slidy-container">
+        <figure id="slidy">
+          <img src="images/29.jpg" alt="img-1">
+          <img src="images/DSC_0228.jpg" alt="img-2">
+          <img src="images/19.jpg" alt="img-3">
+          <img src="images/33.jpg" alt="img-4">
+        </figure>
+      </div>
+    </div>
+    <div class="text-ab2">
+      <p class="text_ab" style="border-top: 0.2vw solid #072c15;">
+        Благотворительный Фонд «Благотворительная школа "Разумное будущее"» это первая в Украине Благотворительная школа личного и IT
+        развития детей. Мы предоставляем возможность детям незащищенных слоев населения познакомиться с сетевыми и облачными технологиями,
+        разработкой программного обеспечения, программированием роботов, а также сделать первые шаги в развитии своей карьеры раньше большинства сверстников.
+      </p>
+      <p class="text_ab">
+        Учебные программы благотворительной школы «Разумное будущее» разработаны специально для школьников как младших, так и
+        старших классов. Программы знакомят детей с современными технологиями, с жизнью в современном информационном мире и многообразием
+        возможностей в нем. Все программы имеют практическую направленность и готовят к будущей работе в IT-отрасли.
+      </p>
+      <p class="text_ab">
+        Основная цель деятельности Фонда - предоставить возможность качественного образования и личностного развития детям и подросткам
+        социально незащищенных слоев населения:
+      </p>
+      <ul class="list_ab2">
+        <li>детей-сирот</li>
+        <li>детей-инвалидов</li>
+        <li>детей из многодетных семей (имеющих 5-ро или более детей)</li>
+        <li>детей военных, погибших или получивших ранения несовместимые с работой</li>
+      </ul>
+    </div>
+  </div><br>
+
+
+  <p class="text_ab2">
+    С этой целью Благотворительный Фонд «Благотворительная школа"Разумное будущее"» привлекает средства от благотворителей,
+    организует учебный процесс, разрабатывает и реализует учебные программы. Мы сосредоточили свои усилия
+    на обучении современным технологиям, так как ИТ - отрасль является самой, самой прибыльной и перспективной с
+    всех отраслей.
+  </p>
+  <p class="text_ab2">
+    Формы и методы реализации программы <i> аудиторные занятия, лабораторные работы, тренинги, экскурсии, мастер-классы,
+    мотивирующие выступления, творческие проекты и задачи, дискуссии, мозговые штурмы, игры, домашние задания, стажировки
+    и др. </i>
+  </p>
+  <div class="sec_text" style="margin-left: 5vw;">
+    <p class="more">
+      <i>Приглашаем благотворителей поддержать наши проекты и помочь детям <br> сделать первые шаги в ИТ и получить
+        качественную ИТ-образование, а, возможно, и первую работу.</i>
+    </p>
+  </div><br>
+
+  <div class="action">
     <h1 class="our_founders" style="padding-left: 11vw;">
-        Наглядова рада
+      Основатели фонда
     </h1><br>
-    <section class="section-6">
-        <div class="row">
-          <figure class="figure">
-            <img src="images/background.png">
-            <figcaption>
-              <h3>Наглядач 1</h3>
-                <p>
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
-                  maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
-                </p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-          <figure class="figure">
-            <img src="images/background.png">
-            <figcaption>
-              <h3>Наглядач 2</h3>
-              <p>
-                  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit laudantium dignissimos doloribus. 
-                  Accusamus magnam dolor illo dignissimos, amet sunt nemo, cupiditate, voluptates omnis reiciendis quidem voluptatum neque quam rerum? Suscipit!
-                </p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-          <figure class="figure">
-            <img src="images/background.png">
-            <figcaption>
-              <h3>Наглядач 3</h3>
-              <p>
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
-                maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
-                </p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-          <figure class="figure">
-            <img src="images/background.png">
-            <figcaption>
-              <h3>Наглядач 4</h3>
-              <p>
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
-                maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
-                </p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
+  </div>
+  <div class="row_f">
+    <div class="column-f">
+      <div class="container-f">
+        <img src="images/founders/f-1.png" alt="founder-1" class="imge">
+        <div class="overlay">
+          <div class="text-f">
+            <h3 style="text-align: center;">Закалов Игорь Александрович <br>к.т.н.</h3>
+            <p class="text_ab2" style="text-align: center;">Основатель и Президент Фонда</p><br>
+            <p class="text_ab3"><i>"Всю жизнь я занимаюсь профессиональной ИТ - образованием, потому что это одна из самых интересных и динамичных
+              отраслей в мире. Создаваемые мной проекты подготовили десятки тысяч IT-специалистов, которые успешно работают во всем
+              мире. Поэтому и нашу Благотворительную школу мы создали для того, чтобы предоставить возможность познакомиться с современными
+              технологиями и начать свою IT-карьеру тем детям, кто не может самостоятельно этого сделать. Благодаря нашим программам
+              дети смогут получить качественное IT-образование, овладеть профессией и найти свое место в мире."</i>
+              </p>
+          </div>
         </div>
-      </section>
-      
-  </div>-->
-<div class="action">
+      </div>
+    </div>
+    <div class="column-f">
+      <div class="container-f">
+        <img src="images/founders/f-2.png" alt="founder-1" class="imge">
+        <div class="overlay">
+          <div class="text-f">
+            <h3 style="text-align: center;">Мартынчук Дмитрий</h3>
+            <p class="text_ab2" style="text-align: center;">Cоучредытель и парнер Фонда</p><br>
+            <p class="text_ab3"><i>"Мой отец, которым я очень горжусь, был сиротой и учился в школе-интернате и я, на примере отца,
+              очень хорошо знаю как трудно достигать жизненной гармонии и цели без поддержки. В интернате о тебе
+              заботятся, пытаются заменить родителей, но после выпуска ты становишься один на один с жизненными трудностями.
+              После интерната он пошел учиться в строительное ПТУ, после его окончания тяжело работал на
+              железобетонном комбинате и только в 31 год при поддержке моей мамы был вынужден поступить в строительный институт и
+              по вечерам, после трудно работы на заводе, идти на пары, а по ночам чертить домашние задания."</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div><br><br><br>
+  <!--<div class="action">
+  <h1 class="our_founders" style="padding-left: 11vw;">
+      Наглядова рада
+  </h1><br>
+  <section class="section-6">
+      <div class="row">
+        <figure class="figure">
+          <img src="images/background.png">
+          <figcaption>
+            <h3>Наглядач 1</h3>
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
+                maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
+              </p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+        <figure class="figure">
+          <img src="images/background.png">
+          <figcaption>
+            <h3>Наглядач 2</h3>
+            <p>
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit laudantium dignissimos doloribus. 
+                Accusamus magnam dolor illo dignissimos, amet sunt nemo, cupiditate, voluptates omnis reiciendis quidem voluptatum neque quam rerum? Suscipit!
+              </p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+        <figure class="figure">
+          <img src="images/background.png">
+          <figcaption>
+            <h3>Наглядач 3</h3>
+            <p>
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
+              maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
+              </p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+        <figure class="figure">
+          <img src="images/background.png">
+          <figcaption>
+            <h3>Наглядач 4</h3>
+            <p>
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe id, quaerat, itaque illo 
+              maxime sunt tempore amet molestias earum nostrum! Possimus quae aut, qui tenetur obcaecati soluta ad sapiente?"
+              </p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+      </div>
+    </section>
+    
+</div>-->
+  <div class="action">
     <h1 class="our_founders" style="padding-left: 11vw;">
-        Результаты деятельности
+      Результаты деятельности
     </h1><br>
   </div>
   <div class="contain">
     <div class="col-img">
-        <img src="images/125.jpg" alt="image" width="100%" height="auto" style="border: 0.2vw solid #072c15; box-shadow: 5px 8px 10px 3px #888888;">
+      <div id="slidy-container">
+        <figure id="slidy">
+          <img src="images/8152.jpg" alt="img-1" style="margin-top: 0;">
+          <img src="images/6445.jpg" alt="img-2" style="margin-top: 0;">
+          <img src="images/3617.jpg" alt="img-3" style="margin-top: 0;">
+          <img src="images/11-33-49.jpg" alt="img-4" style="margin-top: 0;">
+          <img src="images/123.jpg" alt="img-5" style="margin-top: 0;">
+        </figure>
+      </div>
     </div>
-    <div class="text-about">
-        <p class="text_ab">
-            Благотворительный Фонд был основан в сентябре 2016 года. За это время было проведено обучение более
-            1000 детей по разным ІТ-направлениям. Также более 400 детей изучили ІТ-английский язык.
-        </p>
-        <p class="text_ab">
-            Обучение проходит в помещениях Фонда, учебные программы предоставляет партнер Фонда - ІТ школа Main School. 
-        </p><br>
-        <p class="text_ab">
-            Благодаря помощи партнеров и доноров Фонда было организовано и проведено обучение, экскурсии в ІТ-компаний, стажировки, ІТ-лагеря.
-        </p>
+    <div class="text-ab">
+      <p class="text_ab">
+        Благотворительный Фонд был основан в сентябре 2016 года. За это время было проведено обучение более
+        1000 детей по разным IТ-направлениям. Также более 400 детей изучили IT-английский язык.
+      </p>
+      <p class="text_ab">
+        Обучение проходит в помещениях Фонда, учебные программы предоставляет партнер Фонда - ІТ школа Main School.
+      </p><br>
+      <p class="text_ab">
+        Благодаря помощи партнеров и доноров Фонда было организовано и проведено обучение, экскурсии в ІТ-компаний,
+        стажировки, ІТ-лагеря.
+      </p>
     </div>
   </div><br>
+  <script>
+    var timeOnSlide = 3,
+      timeBetweenSlides = 1,
+
+      animationstring = 'animation',
+      animation = false,
+      keyframeprefix = '',
+      domPrefixes = 'Webkit Moz O Khtml'.split(' '),
+      pfx = '',
+      slidy = document.getElementById("slidy");
+    if (slidy.style.animationName !== undefined) {
+      animation = true;
+    }
+
+    if (animation === false) {
+      for (var i = 0; i < domPrefixes.length; i++) {
+        if (slidy.style[domPrefixes[i] + 'AnimationName'] !== undefined) {
+          pfx = domPrefixes[i];
+          animationstring = pfx + 'Animation';
+          keyframeprefix = '-' + pfx.toLowerCase() + '-';
+          animation = true;
+          break;
+        }
+      }
+    }
+
+    if (animation === false) {
+
+    } else {
+      var images = slidy.getElementsByTagName("img"),
+        firstImg = images[0],
+
+        imgWrap = firstImg.cloneNode(false);
+      slidy.appendChild(imgWrap);
+      var imgCount = images.length,
+        totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1),
+        slideRatio = (timeOnSlide / totalTime) * 100,
+        moveRatio = (timeBetweenSlides / totalTime) * 100,
+        basePercentage = 100 / imgCount,
+        position = 0,
+        css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount *
+        100) + "%;  }\n";
+      css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+      css.innerHTML += "@" + keyframeprefix + "keyframes slidy {\n";
+      for (i = 0; i < (imgCount - 1); i++) {
+        position += slideRatio;
+        css.innerHTML += position + "% { left: -" + (i * 100) + "%; }\n";
+        position += moveRatio;
+        css.innerHTML += position + "% { left: -" + ((i + 1) * 100) + "%; }\n";
+      }
+      css.innerHTML += "}\n";
+      css.innerHTML += "#slidy { left: 0%; " + keyframeprefix + "transform: translate3d(0,0,0); " + keyframeprefix +
+        "animation: " + totalTime + "s slidy infinite; }\n";
+      document.body.appendChild(css);
+    }
+  </script>
+
   <div class="action">
     <h1 class="our_galary" style="padding-left: 11vw;">
       Истории успеха
@@ -291,11 +305,11 @@
       <div class="photo" style="background-image: url(images/6129.jpg)"></div>
     </div>
     <div class="description">
-      <h1>Компаниец Александр</h1>
-        <p class="text_ab"> 
-            Примите мою большую благодарность за то, что мой сын Компаниец Александр имеет возможность развиваться и учиться в ІТ сфере. Благодаря Вам он получил большую
-            эрудицию в современных технологиях, это поможет ему как в умственном развитии так и в выборе дальнейшей профессии.
-        </p>
+      <h1>Компаниєц Александр</h1>
+      <p class="text_ab">
+        Примите мою большую благодарность за то, что мой сын Компаниец Александр имеет возможность развиваться и учиться в
+        IT сфере. Благодаря Вам он получил эрудицию в современных технологиях, это поможет ему как в умственном развитии так и в выборе дальнейшей профессии.
+      </p>
     </div>
   </div><br>
   <div class="blog-card alt">
@@ -304,10 +318,11 @@
     </div>
     <div class="description">
       <h1>Пересунько Богдана</h1>
-        <p class="text_ab">
-            Учусь в ІТ-школе уже третий год, хочу поблагодарить БФ «Разумное будущее» за такую ​​возможность. Я мечтала научиться программировать и моя мечта сбылась !!!!!!
-            Планирую продолжить учиться и удовольствием приобретать новые знания.
-        </p>
+      <p class="text_ab">
+        Учусь в ИТ-школе уже третий год, хочу поблагодарить БФ «Разумное будущее» за такую ​​возможность. Я мечтала
+        научиться программировать и моя мечта сбылась !!!!!!
+        Планирую продолжить учиться и приобретать новые знания.
+      </p>
     </div>
   </div><br>
   <div class="blog-card">
@@ -316,171 +331,270 @@
     </div>
     <div class="description">
       <h1>Черкас Владислав</h1>
-        <p class="text_ab"> 
-            IT-школа выходного дня дала мне возможность познать основные направления IT технологий, за что я очень благодарен. Учась IT-школе, я понял в каком направлении хочу в
-            дальнейшем развиваться и после окончания школы планирую поступить вузы по направлению IT-технологий.
-        </p>
+      <p class="text_ab">
+        IT-школа выходного дня дала мне возможность познать основные направления IT технологий, за что я очень благодарен.
+        Учась IT-школе, я понял в каком направлении хочу в дальнейшем развиваться и после окончания школы планирую поступить вузы по направлению IT-технологий.
+      </p>
     </div>
   </div><br>
-  <div class="blog-card alt">
-    <div class="meta">
-      <div class="photo" style="background-image: url(images/IT-technologies/IT-01.jpg)"></div>
-    </div>
-    <div class="description">
-      <h1>Франко Юрий</h1>
+
+  <button class="accord-ab"><div class="text_ab">Больше историй</div></button>
+  <div class="panel-ab"><br>
+    <div class="blog-card alt">
+      <div class="meta">
+        <div class="photo" style="background-image: url(images/IT-technologies/IT-01.jpg)"></div>
+      </div>
+      <div class="description">
+        <h1>Франко Юрий</h1>
         <p class="text_ab">
-            После успешного завершения обучения в IT-школе выходного дня, определился с будущей профессией и поставил перед собой цель стать успешным
-            IT-специалистом. На сегодняшний день Юрий учится в вузе по IT-специализации.
+          После успешного завершения обучения в IT-школе выходного дня, определился с будущей профессией и поставил
+          перед собой цель стать успешным IT-специалистом. На сегодняшний день Юрий учится в вузе по IT-специализации.
         </p>
+      </div>
+    </div><br>
+  </div><br><br>
+
+
+  <div class="action" id="galary-a">
+    <h1 class="our_galary" style="padding-left: 11vw;">
+      Галерея
+    </h1><br>
+  </div>
+  <div class="row" style="border-bottom: 2px solid #114e28;">
+    <div class="column">
+      <a target="_blank" href="images/DSC_0228.jpg">
+        <img class="gal" src="images/DSC_0228.jpg" style="width:100%; margin-bottom: 2.5vh;">
+      </a>
+      <a target="_blank" href="images/DSC_0312.JPG">
+        <img class="gal" src="images/DSC_0312.JPG" style="width:100%; margin-bottom: 2.5vh;">
+      </a>
+      <a target="_blank" href="images/DSC_0316.JPG">
+        <img class="gal" src="images/DSC_0316.JPG" style="width:100%; margin-bottom: 2.5vh;">
+      </a>
+      <a target="_blank" href="images/DSC_0326 (1).JPG">
+        <img class="gal" src="images/DSC_0326 (1).JPG" style="width:100%; margin-bottom: 2.5vh;">
+      </a>
+    </div>
+    <div class="column">
+      <a target="_blank" href="images/12-09-04.jpg">
+        <img class="gal" src="images/12-09-04.jpg" style="width:100%; margin-bottom: 1vh;">
+      </a>
+      <a target="_blank" href="images/12-09-55.jpg">
+        <img class="gal" src="images/12-09-55.jpg" style="width:100%; margin-bottom: 1vh;">
+      </a>
+      <a target="_blank" href="images/123.jpg">
+        <img class="gal" src="images/123.jpg" style="width:100%; margin-bottom: 1vh;">
+      </a>
+      <a target="_blank" href="images/13.jpg">
+        <img class="gal" src="images/13.jpg" style="width:100%; margin-bottom: 1vh;">
+      </a>
+    </div>
+    <div class="column">
+      <a target="_blank" href="images/4587.jpg">
+        <img class="gal" src="images/4587.jpg" style="width:100%; margin-bottom: 2.3vh;">
+      </a>
+      <a target="_blank" href="images/6129.jpg">
+        <img class="gal" src="images/6129.jpg" style="width:100%; margin-bottom: 2.3vh;">
+      </a>
+      <a target="_blank" href="images/125.jpg">
+        <img class="gal" src="images/125.jpg" style="width:100%; margin-bottom: 2.3vh;">
+      </a>
+      <a target="_blank" href="images/6736.jpg">
+        <img class="gal" src="images/6736.jpg" style="width:100%; margin-bottom: 2.3vh;">
+      </a>
+    </div>
+    <div class="column">
+      <a target="_blank" href="images/14-07-14.jpg">
+        <img class="gal" src="images/14-07-14.jpg" style="width:100%; margin-bottom: 0.5vh;">
+      </a>
+      <a target="_blank" href="images/14-07-58.jpg">
+        <img class="gal" src="images/14-07-58.jpg" style="width:100%; margin-bottom: 0.5vh;">
+      </a>
+      <a target="_blank" href="images/14-09-04.jpg">
+        <img class="gal" src="images/14-09-04.jpg" style="width:100%; margin-bottom: 0.5vh;">
+      </a>
+      <a target="_blank" href="images/19.jpg">
+        <img class="gal" src="images/19.jpg" style="width:100%; margin-bottom: 0.5vh;">
+      </a>
+    </div>
+    <div class="column">
+      <a target="_blank" href="images/IMG_8634.jpg">
+        <img class="gal" src="images/IMG_8634.jpg" style="width:100%; margin-bottom: 2vh;">
+      </a>
+      <a target="_blank" href="images/IMG_8635.jpg">
+        <img class="gal" src="images/IMG_8635.jpg" style="width:100%; margin-bottom: 2vh;">
+      </a>
+      <a target="_blank" href="images/DSC_0315.JPG">
+        <img class="gal" src="images/DSC_0315.JPG" style="width:100%; margin-bottom: 2vh;">
+      </a>
+      <a target="_blank" href="images/DSC_0320.JPG">
+        <img class="gal" src="images/DSC_0320.JPG" style="width:100%; margin-bottom: 2vh;">
+      </a>
     </div>
   </div><br>
-    <div class="action" id="galary-a">
-        <h1 class="our_galary" style="padding-left: 11vw;">
-            Галерея 
-        </h1><br>
-    </div>
-<div class="row" style="border-bottom: 2px solid #114e28;"> 
-    <div class="column">
-        <a target="_blank" href="images/DSC_0228.jpg">
-            <img class="gal" src="images/DSC_0228.jpg" style="width:100%; margin-bottom: 2.5vh;">
-        </a>
-        <a target="_blank" href="images/DSC_0312.JPG">
-            <img class="gal" src="images/DSC_0312.JPG" style="width:100%; margin-bottom: 2.5vh;">
-        </a>
-        <a target="_blank" href="images/DSC_0316.JPG">
-            <img class="gal" src="images/DSC_0316.JPG" style="width:100%; margin-bottom: 2.5vh;">
-        </a>
-        <a target="_blank" href="images/DSC_0326 (1).JPG">
-            <img class="gal" src="images/DSC_0326 (1).JPG" style="width:100%; margin-bottom: 2.5vh;">
-        </a>
+
+  <button class="accord-ab"><div class="text_ab">Вся галерея</div></button>
+  <div class="panel-ab"><br>
+    <div class="row" style="border-bottom: 2px solid #114e28;">
+      <div class="column">
         <a target="_blank" href="images/11-33-49.jpg">
-            <img class="gal" src="images/11-33-49.jpg" style="width:100%; margin-bottom: 2.5vh;">
+          <img class="gal" src="images/11-33-49.jpg" style="width:100%; margin-bottom: 2.6vh;">
         </a>
         <a target="_blank" href="images/29.jpg">
-            <img class="gal" src="images/29.jpg" style="width:100%; margin-bottom: 2.5vh;">
+          <img class="gal" src="images/29.jpg" style="width:100%; margin-bottom: 2.6vh;">
         </a>
-    </div>
-    <div class="column">
-        <a target="_blank" href="images/12-09-04.jpg">
-            <img class="gal" src="images/12-09-04.jpg" style="width:100%; margin-bottom: 1vh;">
+        <a target="_blank" href="images/2.jpg">
+          <img class="gal" src="images/2.jpg" style="width:100%; margin-bottom: 2.6vh;">
         </a>
-        <a target="_blank" href="images/12-09-55.jpg">
-            <img class="gal" src="images/12-09-55.jpg" style="width:100%; margin-bottom: 1vh;">
+        <a target="_blank" href="images/12-10-40.jpg">
+          <img class="gal" src="images/12-10-40.jpg" style="width:100%; margin-bottom: 2.6vh;">
         </a>
-        <a target="_blank" href="images/123.jpg">
-            <img class="gal" src="images/123.jpg" style="width:100%; margin-bottom: 1vh;">
+        <a target="_blank" href="images/16-20-37.jpg">
+          <img class="gal" src="images/16-20-37.jpg" style="width:100%; margin-bottom: 2.6vh;">
         </a>
-        <a target="_blank" href="images/13.jpg">
-            <img class="gal" src="images/13.jpg" style="width:100%; margin-bottom: 1vh;">
-        </a>
+      </div>
+      <div class="column">
         <a target="_blank" href="images/14-08-16.jpg">
-            <img class="gal" src="images/14-08-16.jpg" style="width:100%; margin-bottom: 1vh;">
+          <img class="gal" src="images/14-08-16.jpg" style="width:100%; margin-bottom: 0.8vh;">
         </a>
         <a target="_blank" href="images/3617.jpg">
-            <img class="gal" src="images/3617.jpg" style="width:100%; margin-bottom: 1vh;">
+          <img class="gal" src="images/3617.jpg" style="width:100%; margin-bottom: 0.8vh;">
         </a>
-    </div>  
-    <div class="column">
-        <a target="_blank" href="images/4587.jpg">
-            <img class="gal" src="images/4587.jpg" style="width:100%; margin-bottom: 2.2vh;">
+        <a target="_blank" href="images/16-21-23.jpg">
+          <img class="gal" src="images/16-21-23.jpg" style="width:100%; margin-bottom: 0.8vh;">
         </a>
-        <a target="_blank" href="images/6129.jpg"> 
-            <img class="gal" src="images/6129.jpg" style="width:100%; margin-bottom: 2.2vh;">
+        <a target="_blank" href="images/124.jpg">
+          <img class="gal" src="images/124.jpg" style="width:100%; margin-bottom: 0.8vh;">
         </a>
-        <a target="_blank" href="images/125.jpg"> 
-            <img class="gal" src="images/125.jpg" style="width:100%; margin-bottom: 2.2vh;">
+        <a target="_blank" href="images/125.jpg">
+          <img class="gal" src="images/125.jpg" style="width:100%; margin-bottom: 0.8vh;">
         </a>
-        <a target="_blank" href="images/6736.jpg"> 
-            <img class="gal" src="images/6736.jpg" style="width:100%; margin-bottom: 2.2vh;">
+        <a target="_blank" href="images/main_future-1.jpg">
+          <img class="gal" src="images/main_future-1.jpg" style="width:100%; margin-bottom: 0.8vh;">
+        </a>
+      </div>
+      <div class="column">
+        <a target="_blank" href="images/809.jpg">
+          <img class="gal" src="images/809.jpg" style="width:100%; margin-bottom: 2.5vh;">
+        </a>
+        <a target="_blank" href="images/14556.jpg">
+          <img class="gal" src="images/14556.jpg" style="width:100%; margin-bottom: 2.5vh;">
         </a>
         <a target="_blank" href="images/36175.jpg">
-            <img class="gal" src="images/36175.jpg" style="width:100%; margin-bottom: 2.2vh;">
+          <img class="gal" src="images/36175.jpg" style="width:100%; margin-bottom: 2.5vh;">
         </a>
-    </div>
-    <div class="column">
-        <a target="_blank" href="images/14-07-14.jpg">
-            <img class="gal" src="images/14-07-14.jpg" style="width:100%; margin-bottom: 1vh;">
+        <a target="_blank" href="images/4585.jpg">
+          <img class="gal" src="images/4585.jpg" style="width:100%; margin-bottom: 2.5vh;">
         </a>
-        <a target="_blank" href="images/14-07-58.jpg">
-            <img class="gal" src="images/14-07-58.jpg" style="width:100%; margin-bottom: 1vh;">
+      </div>
+      <div class="column">
+        <a target="_blank" href="images/6140.jpg">
+          <img class="gal" src="images/6140.jpg" style="width:100%; margin-bottom: 3vh;">
         </a>
-        <a target="_blank" href="images/14-09-04.jpg">
-            <img class="gal" src="images/14-09-04.jpg" style="width:100%; margin-bottom: 1vh;">
+        <a target="_blank" href="images/6168.jpg">
+          <img class="gal" src="images/6168.jpg" style="width:100%; margin-bottom: 3vh;">
         </a>
-        <a target="_blank" href="images/19.jpg">   
-            <img class="gal" src="images/19.jpg" style="width:100%; margin-bottom: 1vh;">
+        <a target="_blank" href="images/8175.jpg">
+          <img class="gal" src="images/8175.jpg" style="width:100%; margin-bottom: 3vh;">
         </a>
-        <a target="_blank" href="images/6140.jpg">   
-            <img class="gal" src="images/6140.jpg" style="width:100%; margin-bottom: 1vh;">
+        <a target="_blank" href="images/8100.jpg">
+          <img class="gal" src="images/8100.jpg" style="width:100%; margin-bottom: 3vh;">
         </a>
-        <a target="_blank" href="images/6168.jpg">   
-            <img class="gal" src="images/6168.jpg" style="width:100%; margin-bottom: 1vh;">
+        <a target="_blank" href="images/8203.jpg">
+          <img class="gal" src="images/8203.jpg" style="width:100%; margin-bottom: 3vh;">
         </a>
-    </div>
-    <div class="column">
-        <a target="_blank" href="images/IMG_8634.jpg"> 
-            <img class="gal" src="images/IMG_8634.jpg" style="width:100%; margin-bottom: 2vh;">
-        </a>
-        <a target="_blank" href="images/IMG_8635.jpg"> 
-            <img class="gal" src="images/IMG_8635.jpg" style="width:100%; margin-bottom: 2vh;">
-        </a>
-        <a target="_blank" href="images/DSC_0315.JPG">
-            <img class="gal" src="images/DSC_0315.JPG" style="width:100%; margin-bottom: 2vh;">
-        </a>
-        <a target="_blank" href="images/DSC_0320.JPG">
-            <img class="gal" src="images/DSC_0320.JPG" style="width:100%; margin-bottom: 2vh;">
-        </a>
+      </div>
+      <div class="column">
         <a target="_blank" href="images/DSC_0322.JPG">
-            <img class="gal" src="images/DSC_0322.JPG" style="width:100%; margin-bottom: 2vh;">
+          <img class="gal" src="images/DSC_0322.JPG" style="width:100%; margin-bottom: 3.5vh;">
         </a>
+        <a target="_blank" href="images/80958.jpg">
+          <img class="gal" src="images/80958.jpg" style="width:100%; margin-bottom: 3.5vh;">
+        </a>
+        <a target="_blank" href="images/8047.jpg">
+          <img class="gal" src="images/8047.jpg" style="width:100%; margin-bottom: 3.5vh;">
+        </a>
+        <a target="_blank" href="images/8152.jpg">
+          <img class="gal" src="images/8152.jpg" style="width:100%; margin-bottom: 3.5vh;">
+        </a>
+      </div>
+    </div><br>
+  </div><br>
+  </div><br>
+
+  <script>
+    var acc = document.getElementsByClassName("accord-ab");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("act-ab");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+  <!--<div class="action">
+              <h1 class="our_galary" style="padding-left: 11vw;">
+              Нагороди  
+              </h1><br>
+          </div>
+          <div class="main-img">
+              <div class="bg-img">
+                  <img src="images/124.jpg" alt="main-image" width="100%" height="auto">
+              </div>
+          </div><br>-->
+
+
+  <div class="contain">
+    <div class="col-img" style="width: 80%;">
+      <h3 class="text_ab"><i class="fa fa-paper-plane-o"></i> Контакты</h3>
+      <div class="icon-box-content">
+        <p class="mb-1"><i class="fa fa-envelope"></i> Email:
+          <a href="https://gmail.com" target="_blank" style="text-decoration: none;">
+            <i class="color-a">smartfuture.itcourses@gmail.com</i>
+          </a>
+        </p>
+        <p class="mb-1"><i class="fa fa-phone"></i> Телефон.
+          <i class="color-a">+38(050) 356-16-66</i>
+        </p>
+      </div><br>
+      <h3 class="text_ab"><i class="fa fa-map-marker"></i> Адрес</h3>
+      <div class="icon-box-content">
+        <p class="mb-1">
+          03039, г. Киев, Украина<br>
+          ул. Голосеевская, д. 17
+        </p>
+      </div><br>
     </div>
-    </div><br><br>
-            <!--<div class="action">
-                <h1 class="our_galary" style="padding-left: 11vw;">
-                Нагороди  
-                </h1><br>
-            </div>
-            <div class="main-img">
-                <div class="bg-img">
-                    <img src="images/124.jpg" alt="main-image" width="100%" height="auto">
-                </div>
-            </div><br>-->
-    
+  </div><br>
 
-        <div class="contact" style="margin-left: 5vw;">
-          <h3>Контакты</h3>
-          <p>
-            Наш адрес: г. Киев, 03039, ул. Голосеевская, д. 17
-          </p>
-          <p>
-            <i class="fa fa-phone">  +38(050) 356-16-66</i>
-          </p>
-          <p>
-            <i class="fa fa-envelope">  smartfuture.itcourses@gmail.com</i>
-          </p>
-        </div>
-        <br><br><br>
-      
-      <footer>
-        <div class="foot-line">
-          <div class="nav-foot about-f"><a href="about-ru.html"><i class="fa fa-pencil-square-o"></i> Про фонд</a></div>
-          <div class="nav-foot activity-f"><a href="activity-ru.html"><i class="fa fa-plus-square"></i> Деятельность</a></div>
-          <div class="nav-foot cooperation-f"><a href="cooperation-ru.html"><i class="fa fa-handshake-o"></i> Сотрудничество</a></div>
-          <div class="nav-foot blog-f"><a href="blog-ru.html"><i class="fa fa-commenting"></i> Блог</a></div>
-          <div class="nav-foot contacts-f"><a href="contacts-ru.html"><i class="fa fa-phone"></i> Контакты</a></div>
-        </div><br>
-        <div class="copy-right">
-          <p>
-            <i class="fa fa-copyright"></i> Copyright All Right Reserved
-          </p>
-        </div>
-        <div class="design">
-          <p>
-            Designed by <b>Shaposhnyck Ihor</b>
-          </p>
-        </div>
-      </footer>
+  <footer>
+    <div class="foot-line">
+      <div class="nav-foot about-f"><a href="about-ru.html"><i class="fa fa-pencil-square-o"></i> Про фонд</a></div>
+      <div class="nav-foot activity-f"><a href="activity-ru.html"><i class="fa fa-plus-square"></i> Деятельность</a></div>
+      <div class="nav-foot cooperation-f"><a href="cooperation-ru.html"><i class="fa fa-handshake-o"></i> Сотрудничество</a></div>
+      <div class="nav-foot blog-f"><a href="blog-ru.html"><i class="fa fa-commenting"></i> Блог</a></div>
+      <div class="nav-foot contacts-f"><a href="contacts-ru.html"><i class="fa fa-phone"></i> Контакты</a></div>
+    </div><br>
+    <div class="copy-right">
+      <p>
+        <i class="fa fa-copyright"></i> Copyright All Right Reserved
+      </p>
+    </div>
+    <div class="design">
+      <p>
+        Designed by <b>Shaposhnyck Ihor</b>
+      </p>
+    </div>
+  </footer>
 
-    <script src="javascript/script.js"></script>
+  <script src="javascript/script.js"></script>
 </body>
+
 </html>

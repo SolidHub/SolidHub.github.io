@@ -163,6 +163,14 @@ nav {
   text-align: left;
   font-weight: bold;
 }
+.main_purpose p {
+  padding: 5px;
+  text-align: left;
+  font-size: 3vh;
+  letter-spacing: 0.2vw;
+  font-weight: bolder;
+  color: #0d1f14;
+}
 
 @media screen and (max-width:1600px) {
   .logo-img {
@@ -467,8 +475,8 @@ nav {
     width: 98%;
     margin-left: 0.5vw;
     text-align: left;
-    font-size: 2.5vh;
-    letter-spacing: 0.3vw;
+    font-size: 3vh;
+    letter-spacing: 0.5vw;
     font-weight: bolder;
     color: #1c241f;
   }
@@ -844,7 +852,6 @@ img {
 .container-f {
   position: relative;
   width: 90%;
-  box-shadow: 2px 8px 10px 3px #888888;
 }
 
 .imge {
@@ -2144,4 +2151,17 @@ section {
   .act-ab:after {
     font-size: 3vw;
   }
+}
+.coup {
+  width: 95%;
+  height: 90%;
+  border-radius: 1.5vh;
+  margin: auto;
+  box-shadow: 2px 8px 10px 3px #888888;
+}
+
+.conner {
+  padding: 2px 16px;
+  background-color: #f1f1f1;
+  border-radius: 1.5vh;
 }

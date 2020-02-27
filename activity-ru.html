@@ -431,8 +431,7 @@
                 style="color:#0e3f21; font-size: 2.9vh; padding-left: 2vw; padding-right: 1vw;"> </i> основы WEB – разработки
                 </button>
                 <div class="panel">
-                    <div class="panel">
-                        <div class="text-ab2">
+                    <div class="text-ab2">
                         <p class="text_ab">
                             Веб-розробник – це універсальний спеціаліст, який забезпечує логіку й створення зовнішнього вигляду сайту.<br>
                             <i>Що таке <b>HTML & CSS</b>?</i><br>
@@ -451,7 +450,6 @@
                                 <li>засвоє інструменти веб-розробки;</li>
                                 <li>поступово, крок за кроком створить власний проект – інтерактивну веб-сторінку.</li>
                             </ul>
-                        </div>
                     </div>
                 </div>
                 <button class="accordion"><i class="fa fa-share-alt"
@@ -566,16 +564,18 @@
         </div><br>
 
         <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
+            const acc = document.getElementsByClassName("accordion");
 
-            for (i = 0; i < acc.length; i++) {
+            for (let i = 0; i < acc.length; i++) {
                 acc[i].addEventListener("click", function () {
                     this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
+                    let panel = this.nextElementSibling;
                     if (panel.style.maxHeight) {
                         panel.style.maxHeight = null;
                     } else {
+                        for (let i = 0; i < acc.length; i++){
+                            acc[i].nextElementSibling.style.maxHeight = null;
+                        }
                         panel.style.maxHeight = panel.scrollHeight + "px";
                     }
                 });

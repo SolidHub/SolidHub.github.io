@@ -202,9 +202,15 @@
                 </li><br>
                 <li style="padding: 0.5vw;">
                   <a target="_blank" href="https://www.youtube.com/watch?v=zEyWzyo19F8">
-                    <i style="font-size: 2vh; color: rgb(24, 24, 51);">IT-English ...</i> 
+                    <i style="font-size: 2vh; color: rgb(24, 24, 51);">IT-English (Телепрограма «День у мегаполісі») ...</i> 
                   </a>
                 </li><br>
+                <li style="padding: 0.5vw;">
+                  <a target="_blank" href="https://ytcropper.com/cropped/9F5a7c4b03b688b">
+                    <i style="font-size: 2vh; color: rgb(24, 24, 51);">Курси англійської мови для дітей з інвалідністю (Телепрограма «Ранок по-київські») ...</i> 
+                  </a>
+                </li><br>
+              </ul>
               </ul>
           </div>
       </div><br>
@@ -215,19 +221,21 @@
       </div>
     </div><br>
     <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-          
-      for (i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-              panel.style.maxHeight = null;
-          } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-          } 
-      });
+     const acc = document.getElementsByClassName("accordion");
+
+      for (let i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              let panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+              } else {
+                  for (let i = 0; i < acc.length; i++){
+                      acc[i].nextElementSibling.style.maxHeight = null;
+                  }
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+              }
+          });
       }
     </script>
 
